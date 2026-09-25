@@ -1,902 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>SkillLink — Learn • Build • Earn</title>
 
   <meta
     name="description"
-    content="SkillLink - Learn skills, build projects and grow your future."
-  >
+    content="SkillLink connects digital learning, practical projects, skills and earning opportunities in one platform."
+  />
 
-  <meta
-    name="theme-color"
-    content="#06142d"
-  >
-
-  <title>SkillLink | Learn • Build • Earn</title>
-
-  <!-- SkillLink CSS -->
-  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" href="data:,">
 </head>
 
 <body>
 
-  <!-- =====================================
-       HEADER
-  ====================================== -->
+  <div id="app">
 
-  <header class="site-header">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-inner">
 
-    <div class="container header-inner">
+        <a href="#home" class="logo">
+          <span class="logo-icon">S</span>
+          <span>SkillLink</span>
+        </a>
 
-      <a href="#home" class="logo">
-        Skill<span>Link</span>
-      </a>
+        <nav class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#courses">Courses</a>
+          <a href="#projects">Projects</a>
+          <a href="#earn">Earn</a>
+          <a href="#community">Community</a>
+          <a href="#about">About</a>
+        </nav>
 
-      <nav class="main-nav">
-
-        <a href="#home">Home</a>
-
-        <a href="#courses">Courses</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#earn">Earn</a>
-
-        <a href="#community">Community</a>
-
-        <a href="#about">About</a>
-
-      </nav>
-
-      <div class="header-actions">
-
-        <button class="search-button" type="button">
-          🔍 Search
-        </button>
-
-        <button class="login-button" type="button">
-          Login
-        </button>
-
-        <button class="signup-button" type="button">
-          Sign Up
-        </button>
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-  <!-- =====================================
-       MAIN CONTENT
-  ====================================== -->
-
-  <main>
-
-    <!-- =====================================
-         HERO
-    ====================================== -->
-
-    <section id="home" class="hero">
-
-      <div class="container hero-grid">
-
-        <div class="hero-content">
-
-          <div class="hero-badge">
-            🚀 Learn • Build • Earn
-          </div>
-
-          <h1>
-            Build Your Skills.
-            <br>
-            Build Your <span>Future.</span>
-          </h1>
-
-          <p>
-            SkillLink connects digital learning, practical projects,
-            skills and opportunities in one platform.
-          </p>
-
-          <div class="hero-buttons">
-
-            <a
-              href="#courses"
-              class="primary-button"
-            >
-              Get Started →
-            </a>
-
-            <a
-              href="#courses"
-              class="secondary-button"
-            >
-              Explore Courses
-            </a>
-
-          </div>
-
-          <div class="hero-stats">
-
-            <div class="stat">
-              <strong>10K+</strong>
-              <small>Learners</small>
-            </div>
-
-            <div class="stat">
-              <strong>120+</strong>
-              <small>Courses</small>
-            </div>
-
-            <div class="stat">
-              <strong>500+</strong>
-              <small>Projects</small>
-            </div>
-
-            <div class="stat">
-              <strong>₹8L+</strong>
-              <small>Earnings</small>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- HERO VISUAL -->
-
-        <div class="hero-visual">
-
-          <div class="visual-card">
-
-            <div class="visual-icon">
-              🎓
-            </div>
-
-            <h3>
-              Learn New Skills
-            </h3>
-
-            <p>
-              Learn practical digital skills from structured courses.
-            </p>
-
-          </div>
-
-
-          <div class="visual-card">
-
-            <div class="visual-icon">
-              💻
-            </div>
-
-            <h3>
-              Build Projects
-            </h3>
-
-            <p>
-              Turn your knowledge into real-world projects.
-            </p>
-
-          </div>
-
-
-          <div class="visual-card">
-
-            <div class="visual-icon">
-              💰
-            </div>
-
-            <h3>
-              Grow & Earn
-            </h3>
-
-            <p>
-              Complete projects and unlock opportunities.
-            </p>
-
-          </div>
-
+        <div class="nav-actions">
+          <button class="btn btn-ghost login-button">Login</button>
+          <button class="btn btn-primary signup-button">Sign Up</button>
         </div>
 
       </div>
+    </header>
 
-    </section>
+
+    <!-- HERO -->
+    <main>
+
+      <section id="home" class="hero">
+        <div class="hero-glow glow-one"></div>
+        <div class="hero-glow glow-two"></div>
+
+        <div class="container hero-grid">
+
+          <div class="hero-content">
+
+            <div class="eyebrow">
+              🚀 Learn • Build • Earn
+            </div>
+
+            <h1>
+              Build Your
+              <span>Skills.</span>
+              <br />
+              Build Your
+              <span>Future.</span>
+            </h1>
+
+            <p class="hero-text">
+              SkillLink connects digital learning, practical projects,
+              skills and opportunities in one powerful platform.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#courses" class="btn btn-primary btn-large">
+                Get Started →
+              </a>
+
+              <a href="#courses" class="btn btn-outline btn-large">
+                Explore Courses
+              </a>
+            </div>
+
+            <div class="stats">
+
+              <div class="stat">
+                <strong>10K+</strong>
+                <span>Learners</span>
+              </div>
+
+              <div class="stat">
+                <strong>120+</strong>
+                <span>Courses</span>
+              </div>
+
+              <div class="stat">
+                <strong>500+</strong>
+                <span>Projects</span>
+              </div>
+
+              <div class="stat">
+                <strong>₹8L+</strong>
+                <span>Earnings</span>
+              </div>
+
+            </div>
+
+          </div>
 
 
-    <!-- =====================================
-         WHY SKILLLINK
-    ====================================== -->
+          <!-- HERO VISUAL -->
+          <div class="hero-visual">
 
-    <section
-      id="about"
-      class="features-section"
-    >
+            <div class="dashboard-card main-dashboard">
 
-      <div class="container">
+              <div class="dashboard-top">
+                <div>
+                  <small>Welcome back</small>
+                  <h3>SkillLink Partner</h3>
+                </div>
 
-        <div class="section-heading">
+                <div class="level-badge">
+                  L3
+                </div>
+              </div>
 
-          <span>
-            WHY SKILLLINK
-          </span>
+              <div class="earning-box">
+                <span>Total Earnings</span>
+                <strong>₹8,450</strong>
+                <small>+18.4% this month</small>
+              </div>
 
-          <h2>
-            Everything in One Platform
-          </h2>
+              <div class="dashboard-stats">
 
-          <p>
-            Learn, practice, build and grow from one place.
-          </p>
+                <div>
+                  <strong>12</strong>
+                  <span>Projects</span>
+                </div>
+
+                <div>
+                  <strong>28</strong>
+                  <span>Referrals</span>
+                </div>
+
+                <div>
+                  <strong>400</strong>
+                  <span>Score</span>
+                </div>
+
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-heading">
+                  <span>Skill Progress</span>
+                  <strong>78%</strong>
+                </div>
+
+                <div class="progress-bar">
+                  <div class="progress-fill"></div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="floating-card floating-one">
+              <span class="floating-icon blue">📚</span>
+              <div>
+                <strong>Learn</strong>
+                <small>Build skills</small>
+              </div>
+            </div>
+
+            <div class="floating-card floating-two">
+              <span class="floating-icon purple">🚀</span>
+              <div>
+                <strong>Build</strong>
+                <small>Real projects</small>
+              </div>
+            </div>
+
+            <div class="floating-card floating-three">
+              <span class="floating-icon green">💰</span>
+              <div>
+                <strong>Earn</strong>
+                <small>Grow income</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- WHY SKILLLINK -->
+      <section class="section" id="about">
+
+        <div class="container">
+
+          <div class="section-heading">
+            <div class="eyebrow">WHY SKILLLINK</div>
+
+            <h2>
+              Everything You Need
+              <span>In One Platform</span>
+            </h2>
+
+            <p>
+              Learn skills, complete practical projects and grow
+              through real opportunities.
+            </p>
+          </div>
+
+
+          <div class="feature-grid">
+
+            <article class="feature-card">
+              <div class="feature-icon blue-bg">📚</div>
+              <h3>Learn</h3>
+              <p>
+                Learn practical digital skills through structured
+                courses and learning paths.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon purple-bg">🛠️</div>
+              <h3>Build</h3>
+              <p>
+                Work on real projects and turn knowledge into
+                practical experience.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon cyan-bg">💼</div>
+              <h3>Opportunities</h3>
+              <p>
+                Discover projects, collaborations and work
+                opportunities.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon green-bg">📈</div>
+              <h3>Grow</h3>
+              <p>
+                Track your progress, referrals, skills, levels
+                and earnings.
+              </p>
+            </article>
+
+          </div>
 
         </div>
 
-
-        <div class="feature-grid">
-
-          <article class="feature-card">
-
-            <div class="feature-icon">
-              📚
-            </div>
-
-            <h3>
-              Learn
-            </h3>
-
-            <p>
-              Access structured courses and develop practical skills.
-            </p>
-
-          </article>
+      </section>
 
 
-          <article class="feature-card">
+      <!-- COURSES -->
+      <section class="section section-dark" id="courses">
 
-            <div class="feature-icon">
-              🛠️
-            </div>
+        <div class="container">
 
-            <h3>
-              Build
-            </h3>
+          <div class="section-heading">
+            <div class="eyebrow">LEARN</div>
+
+            <h2>
+              Learn Skills That
+              <span>Actually Matter</span>
+            </h2>
 
             <p>
-              Work on practical projects and create your portfolio.
+              Build digital skills designed for practical work.
             </p>
+          </div>
 
-          </article>
+
+          <div class="course-grid">
+
+            <article class="course-card course-blue">
+
+              <div class="course-icon">💻</div>
+
+              <div class="course-content">
+
+                <span class="course-tag">TECHNOLOGY</span>
+
+                <h3>Web Development</h3>
+
+                <p>
+                  HTML, CSS, JavaScript and modern web development.
+                </p>
+
+                <button class="card-button">
+                  Explore Course →
+                </button>
+
+              </div>
+
+            </article>
 
 
-          <article class="feature-card">
+            <article class="course-card course-purple">
 
-            <div class="feature-icon">
-              💼
-            </div>
+              <div class="course-icon">🎬</div>
 
-            <h3>
-              Opportunities
-            </h3>
+              <div class="course-content">
+
+                <span class="course-tag">CREATIVE</span>
+
+                <h3>Video Editing</h3>
+
+                <p>
+                  Learn editing, short-form content and creative production.
+                </p>
+
+                <button class="card-button">
+                  Explore Course →
+                </button>
+
+              </div>
+
+            </article>
+
+
+            <article class="course-card course-pink">
+
+              <div class="course-icon">📱</div>
+
+              <div class="course-content">
+
+                <span class="course-tag">MARKETING</span>
+
+                <h3>Digital Marketing</h3>
+
+                <p>
+                  Learn social media, content, ads and digital growth.
+                </p>
+
+                <button class="card-button">
+                  Explore Course →
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PACKAGES -->
+      <section class="section">
+
+        <div class="container">
+
+          <div class="section-heading">
+            <div class="eyebrow">SKILL PACKAGES</div>
+
+            <h2>
+              Choose Your
+              <span>Learning Path</span>
+            </h2>
+          </div>
+
+
+          <div class="package-grid">
+
+            <article class="package-card">
+
+              <div class="package-number">01</div>
+
+              <span class="package-label">DIGITAL FOUNDATION</span>
+
+              <h3>Aarambh</h3>
+
+              <p>
+                Start your digital skills journey.
+              </p>
+
+              <div class="price">
+                ₹499
+              </div>
+
+              <button class="btn btn-primary package-button">
+                Get Started
+              </button>
+
+            </article>
+
+
+            <article class="package-card featured-package">
+
+              <div class="popular">POPULAR</div>
+
+              <div class="package-number">02</div>
+
+              <span class="package-label">
+                CREATIVE + CONTENT SKILLS
+              </span>
+
+              <h3>Udaan</h3>
+
+              <p>
+                Build creative and content skills.
+              </p>
+
+              <div class="price">
+                ₹999
+              </div>
+
+              <button class="btn btn-primary package-button">
+                Get Started
+              </button>
+
+            </article>
+
+
+            <article class="package-card">
+
+              <div class="package-number">03</div>
+
+              <span class="package-label">
+                ADVANCED GROWTH SKILLS
+              </span>
+
+              <h3>Pragati</h3>
+
+              <p>
+                Advanced learning path coming soon.
+              </p>
+
+              <div class="price coming">
+                Coming Soon
+              </div>
+
+              <button class="btn btn-outline package-button">
+                Notify Me
+              </button>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- PROJECTS -->
+      <section class="section section-dark" id="projects">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div class="eyebrow">BUILD</div>
+
+            <h2>
+              Learn By
+              <span>Building</span>
+            </h2>
 
             <p>
-              Discover projects and opportunities based on your skills.
+              Turn your skills into practical project experience.
             </p>
 
-          </article>
+          </div>
 
 
-          <article class="feature-card">
+          <div class="project-grid">
 
-            <div class="feature-icon">
-              📈
+            <article class="project-card">
+              <div class="project-icon">🌐</div>
+              <span>WEB</span>
+              <h3>Portfolio Website</h3>
+              <p>
+                Build a professional personal portfolio website.
+              </p>
+              <button>View Project →</button>
+            </article>
+
+
+            <article class="project-card">
+              <div class="project-icon">🛒</div>
+              <span>BUSINESS</span>
+              <h3>Online Store</h3>
+              <p>
+                Create an e-commerce website for a business.
+              </p>
+              <button>View Project →</button>
+            </article>
+
+
+            <article class="project-card">
+              <div class="project-icon">🤖</div>
+              <span>AI</span>
+              <h3>AI Assistant</h3>
+              <p>
+                Create an AI-powered assistant project.
+              </p>
+              <button>View Project →</button>
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- EARN -->
+      <section class="section" id="earn">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div class="eyebrow">GROW & EARN</div>
+
+            <h2>
+              Turn Your Skills
+              <span>Into Opportunities</span>
+            </h2>
+
+          </div>
+
+
+          <div class="earn-grid">
+
+            <div class="earn-card">
+              <span>💼</span>
+              <h3>Project Opportunities</h3>
+              <p>
+                Complete practical projects and unlock work opportunities.
+              </p>
             </div>
 
-            <h3>
+            <div class="earn-card">
+              <span>🤝</span>
+              <h3>Referral Program</h3>
+              <p>
+                Earn through valid referrals and track your referral performance.
+              </p>
+            </div>
+
+            <div class="earn-card">
+              <span>🏆</span>
+              <h3>Skill Levels</h3>
+              <p>
+                Progress through levels based on skills, score and performance.
+              </p>
+            </div>
+
+            <div class="earn-card">
+              <span>📊</span>
+              <h3>Earnings Ledger</h3>
+              <p>
+                Track project earnings, referral earnings and transactions.
+              </p>
+            </div>
+
+            <div class="earn-card">
+              <span>🪙</span>
+              <h3>Credits & Rewards</h3>
+              <p>
+                Manage credits and unlock platform rewards.
+              </p>
+            </div>
+
+            <div class="earn-card">
+              <span>📈</span>
+              <h3>Performance</h3>
+              <p>
+                Track your growth, activity and overall SkillLink journey.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- COMMUNITY -->
+      <section class="section section-dark" id="community">
+
+        <div class="container">
+
+          <div class="section-heading">
+
+            <div class="eyebrow">COMMUNITY</div>
+
+            <h2>
               Grow
-            </h3>
+              <span>Together</span>
+            </h2>
 
             <p>
-              Improve your level, score, skills and experience.
+              Learn, collaborate and improve with the SkillLink community.
             </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         COURSES
-    ====================================== -->
-
-    <section
-      id="courses"
-      class="courses-section"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span>
-            LEARNING
-          </span>
-
-          <h2>
-            Explore SkillLink Courses
-          </h2>
-
-          <p>
-            Learn skills that you can apply in real projects.
-          </p>
-
-        </div>
-
-
-        <div class="course-grid">
-
-          <!-- COURSE 1 -->
-
-          <article class="course-card">
-
-            <div class="course-image">
-              💻
-            </div>
-
-            <div class="course-content">
-
-              <span>
-                Technology
-              </span>
-
-              <h3>
-                Web Development
-              </h3>
-
-              <p>
-                Learn HTML, CSS, JavaScript and modern web development.
-              </p>
-
-              <button type="button">
-                View Course
-              </button>
-
-            </div>
-
-          </article>
-
-
-          <!-- COURSE 2 -->
-
-          <article class="course-card">
-
-            <div class="course-image">
-              🎬
-            </div>
-
-            <div class="course-content">
-
-              <span>
-                Creative
-              </span>
-
-              <h3>
-                Video Editing
-              </h3>
-
-              <p>
-                Learn practical video editing and content creation.
-              </p>
-
-              <button type="button">
-                View Course
-              </button>
-
-            </div>
-
-          </article>
-
-
-          <!-- COURSE 3 -->
-
-          <article class="course-card">
-
-            <div class="course-image">
-              📱
-            </div>
-
-            <div class="course-content">
-
-              <span>
-                Marketing
-              </span>
-
-              <h3>
-                Digital Marketing
-              </h3>
-
-              <p>
-                Learn social media, marketing and online growth skills.
-              </p>
-
-              <button type="button">
-                View Course
-              </button>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         PACKAGES
-    ====================================== -->
-
-    <section class="packages-section">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span>
-            SKILLINK PACKAGES
-          </span>
-
-          <h2>
-            Choose Your Learning Path
-          </h2>
-
-          <p>
-            Start learning with a SkillLink package.
-          </p>
-
-        </div>
-
-
-        <div class="package-grid">
-
-          <!-- AARAMBH -->
-
-          <article class="package-card">
-
-            <h3>
-              Aarambh
-            </h3>
-
-            <p>
-              Digital Foundation
-            </p>
-
-            <strong>
-              ₹499
-            </strong>
-
-            <button type="button">
-              Explore Package
-            </button>
-
-          </article>
-
-
-          <!-- UDAAN -->
-
-          <article class="package-card featured">
-
-            <div class="popular">
-              POPULAR
-            </div>
-
-            <h3>
-              Udaan
-            </h3>
-
-            <p>
-              Creative + Content Skills
-            </p>
-
-            <strong>
-              ₹999
-            </strong>
-
-            <button type="button">
-              Explore Package
-            </button>
-
-          </article>
-
-
-          <!-- PRAGATI -->
-
-          <article class="package-card">
-
-            <h3>
-              Pragati
-            </h3>
-
-            <p>
-              Advanced Growth Skills
-            </p>
-
-            <strong>
-              Coming Soon
-            </strong>
-
-            <button type="button">
-              Learn More
-            </button>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         PROJECTS
-    ====================================== -->
-
-    <section
-      id="projects"
-      class="projects-section"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span>
-            PRACTICAL EXPERIENCE
-          </span>
-
-          <h2>
-            Build Real Projects
-          </h2>
-
-          <p>
-            Turn your learning into practical experience.
-          </p>
-
-        </div>
-
-
-        <div class="project-grid">
-
-          <!-- PROJECT 1 -->
-
-          <article class="project-card">
-
-            <span>
-              Web Development
-            </span>
-
-            <h3>
-              Portfolio Website
-            </h3>
-
-            <p>
-              Build a professional portfolio website.
-            </p>
-
-            <button type="button">
-              Start Project
-            </button>
-
-          </article>
-
-
-          <!-- PROJECT 2 -->
-
-          <article class="project-card">
-
-            <span>
-              E-Commerce
-            </span>
-
-            <h3>
-              Online Store
-            </h3>
-
-            <p>
-              Create a modern e-commerce website.
-            </p>
-
-            <button type="button">
-              Start Project
-            </button>
-
-          </article>
-
-
-          <!-- PROJECT 3 -->
-
-          <article class="project-card">
-
-            <span>
-              AI Tools
-            </span>
-
-            <h3>
-              AI Assistant
-            </h3>
-
-            <p>
-              Build a practical AI-powered project.
-            </p>
-
-            <button type="button">
-              Start Project
-            </button>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         EARN
-    ====================================== -->
-
-    <section
-      id="earn"
-      class="earn-section"
-    >
-
-      <div class="container">
-
-        <div class="earn-content">
-
-          <span>
-            GROW WITH SKILLLINK
-          </span>
-
-          <h2>
-            Learn. Build. Earn.
-          </h2>
-
-          <p>
-            Complete learning, build projects, develop skills and
-            unlock opportunities through the SkillLink ecosystem.
-          </p>
-
-
-          <div class="earn-points">
-
-            <div>
-              ✓ Project Opportunities
-            </div>
-
-            <div>
-              ✓ Referral Program
-            </div>
-
-            <div>
-              ✓ Skill Levels
-            </div>
-
-            <div>
-              ✓ Earnings Ledger
-            </div>
-
-            <div>
-              ✓ Credits & Rewards
-            </div>
 
           </div>
 
 
-          <a
-            href="#courses"
-            class="primary-button"
-          >
-            Start Your Journey →
+          <div class="community-grid">
+
+            <div class="community-card">
+              <div>💬</div>
+              <h3>Discussions</h3>
+              <p>
+                Share ideas, questions and learning experiences.
+              </p>
+            </div>
+
+            <div class="community-card">
+              <div>🤝</div>
+              <h3>Partners</h3>
+              <p>
+                Connect with learners, creators and project partners.
+              </p>
+            </div>
+
+            <div class="community-card">
+              <div>🏅</div>
+              <h3>Achievements</h3>
+              <p>
+                Track milestones and celebrate your progress.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+      <div class="container footer-grid">
+
+        <div>
+
+          <a href="#home" class="logo">
+            <span class="logo-icon">S</span>
+            <span>SkillLink</span>
           </a>
 
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         COMMUNITY
-    ====================================== -->
-
-    <section
-      id="community"
-      class="community-section"
-    >
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <span>
-            COMMUNITY
-          </span>
-
-          <h2>
-            Learn Together. Grow Together.
-          </h2>
-
           <p>
-            Connect with learners, partners and creators.
+            Learn • Build • Earn
           </p>
 
+          <small>
+            © 2026 SkillLink. All rights reserved.
+          </small>
+
         </div>
 
 
-        <div class="community-grid">
-
-          <div class="community-card">
-
-            💬
-
-            <h3>
-              Discussions
-            </h3>
-
-            <p>
-              Ask questions and share knowledge.
-            </p>
-
-          </div>
+        <div>
+          <h4>Platform</h4>
+          <a href="#courses">Courses</a>
+          <a href="#projects">Projects</a>
+          <a href="#earn">Earn</a>
+          <a href="#community">Community</a>
+        </div>
 
 
-          <div class="community-card">
-
-            🤝
-
-            <h3>
-              Partners
-            </h3>
-
-            <p>
-              Connect with the SkillLink community.
-            </p>
-
-          </div>
-
-
-          <div class="community-card">
-
-            🏆
-
-            <h3>
-              Achievements
-            </h3>
-
-            <p>
-              Celebrate progress and milestones.
-            </p>
-
-          </div>
-
+        <div>
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#home">Contact</a>
+          <a href="#home">Privacy</a>
+          <a href="#home">Terms</a>
         </div>
 
       </div>
 
-    </section>
+    </footer>
 
-  </main>
-
-
-  <!-- =====================================
-       FOOTER
-  ====================================== -->
-
-  <footer class="site-footer">
-
-    <div class="container footer-grid">
-
-      <div>
-
-        <a
-          href="#home"
-          class="logo"
-        >
-          Skill<span>Link</span>
-        </a>
-
-        <p>
-          Learn • Build • Earn
-        </p>
-
-      </div>
+  </div>
 
 
-      <div>
-
-        <h4>
-          Platform
-        </h4>
-
-        <a href="#courses">
-          Courses
-        </a>
-
-        <a href="#projects">
-          Projects
-        </a>
-
-        <a href="#earn">
-          Earn
-        </a>
-
-        <a href="#community">
-          Community
-        </a>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Company
-        </h4>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#">
-          Contact
-        </a>
-
-        <a href="#">
-          Privacy
-        </a>
-
-        <a href="#">
-          Terms
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-      © 2026 SkillLink. All rights reserved.
-
-    </div>
-
-  </footer>
-
-
-  <!-- =====================================
-       JAVASCRIPT
-  ====================================== -->
-
-  <script type="module" src="/src/main.jsx"></script>
+  <!-- IMPORTANT: VITE ENTRY -->
+  <script type="module" src="/src/main.js"></script>
 
 </body>
-
-</html>
+              </html>
