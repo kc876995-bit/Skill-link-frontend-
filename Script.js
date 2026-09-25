@@ -1,150 +1,93 @@
 import "./style.css";
 
-/* =========================================
-   SKILLINK MAIN JAVASCRIPT
-========================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================================
-     HEADER BUTTONS
-  ========================================= */
-
+  // LOGIN
   const loginButton = document.querySelector(".login-button");
-  const signupButton = document.querySelector(".signup-button");
-  const searchButton = document.querySelector(".search-button");
 
   if (loginButton) {
     loginButton.addEventListener("click", () => {
-      showMessage(
-        "Login system will be connected with Supabase."
-      );
+      showMessage("Login system will be connected with Supabase.");
     });
   }
+
+
+  // SIGNUP
+  const signupButton = document.querySelector(".signup-button");
 
   if (signupButton) {
     signupButton.addEventListener("click", () => {
-      showMessage(
-        "Signup system will be connected with Supabase."
-      );
-    });
-  }
-
-  if (searchButton) {
-    searchButton.addEventListener("click", () => {
-      const searchTerm = prompt(
-        "What would you like to search?"
-      );
-
-      if (searchTerm && searchTerm.trim()) {
-        showMessage(
-          `Searching SkillLink for "${searchTerm.trim()}"`
-        );
-      }
+      showMessage("Create your SkillLink account.");
     });
   }
 
 
-  /* =========================================
-     COURSE BUTTONS
-  ========================================= */
-
-  const courseButtons =
-    document.querySelectorAll(".course-content button");
-
-  courseButtons.forEach((button) => {
+  // COURSE BUTTONS
+  document.querySelectorAll(".card-button").forEach((button) => {
 
     button.addEventListener("click", () => {
 
-      const courseCard =
-        button.closest(".course-card");
+      const card = button.closest(".course-card");
 
-      const courseName =
-        courseCard?.querySelector("h3")?.textContent.trim();
+      const name = card
+        ? card.querySelector("h3")?.textContent
+        : "Course";
 
-      showMessage(
-        `${courseName || "Course"} selected.`
-      );
+      showMessage(`${name} selected.`);
 
     });
 
   });
 
 
-  /* =========================================
-     PACKAGE BUTTONS
-  ========================================= */
-
-  const packageButtons =
-    document.querySelectorAll(".package-card button");
-
-  packageButtons.forEach((button) => {
+  // PACKAGE BUTTONS
+  document.querySelectorAll(".package-button").forEach((button) => {
 
     button.addEventListener("click", () => {
 
-      const packageCard =
-        button.closest(".package-card");
+      const card = button.closest(".package-card");
 
-      const packageName =
-        packageCard?.querySelector("h3")?.textContent.trim();
+      const name = card
+        ? card.querySelector("h3")?.textContent
+        : "Package";
 
-      showMessage(
-        `${packageName || "Package"} selected. Payment will be connected with Razorpay later.`
-      );
+      showMessage(`${name} selected.`);
 
     });
 
   });
 
 
-  /* =========================================
-     PROJECT BUTTONS
-  ========================================= */
-
-  const projectButtons =
-    document.querySelectorAll(".project-card button");
-
-  projectButtons.forEach((button) => {
+  // PROJECT BUTTONS
+  document.querySelectorAll(".project-card button").forEach((button) => {
 
     button.addEventListener("click", () => {
 
-      const projectCard =
-        button.closest(".project-card");
+      const card = button.closest(".project-card");
 
-      const projectName =
-        projectCard?.querySelector("h3")?.textContent.trim();
+      const name = card
+        ? card.querySelector("h3")?.textContent
+        : "Project";
 
-      showMessage(
-        `${projectName || "Project"} selected. Project system will be connected with the SkillLink backend.`
-      );
+      showMessage(`${name} selected.`);
 
     });
 
   });
 
 
-  /* =========================================
-     SMOOTH SCROLL
-  ========================================= */
-
-  document.querySelectorAll(
-    'a[href^="#"]'
-  ).forEach((link) => {
+  // SMOOTH SCROLL
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     link.addEventListener("click", (event) => {
 
-      const targetId =
-        link.getAttribute("href");
+      const targetId = link.getAttribute("href");
 
-      if (
-        !targetId ||
-        targetId === "#"
-      ) {
+      if (!targetId || targetId === "#") {
         return;
       }
 
-      const target =
-        document.querySelector(targetId);
+      const target = document.querySelector(targetId);
 
       if (target) {
 
@@ -162,111 +105,103 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  /* =========================================
-     SCROLL REVEAL
-  ========================================= */
+  // SCROLL REVEAL
+  const animatedElements = document.querySelectorAll(
+    ".feature-card, .course-card, .package-card, .project-card, .earn-card, .community-card"
+  );
 
-  const animatedElements =
-    document.querySelectorAll(
-      ".feature-card, .course-card, .package-card, .project-card, .community-card, .visual-card"
-    );
 
-  const revealObserver =
-    new IntersectionObserver(
-      (entries) => {
+  const observer = new IntersectionObserver(
 
-        entries.forEach((entry) => {
+    (entries) => {
 
-          if (entry.isIntersecting) {
+      entries.forEach((entry) => {
 
-            entry.target.classList.add(
-              "show-card"
-            );
+        if (entry.isIntersecting) {
 
-            revealObserver.unobserve(
-              entry.target
-            );
+          entry.target.classList.add("show-card");
 
-          }
+          observer.unobserve(entry.target);
 
-        });
+        }
 
-      },
-      {
-        threshold: 0.12
-      }
-    );
+      });
+
+    },
+
+    {
+      threshold: 0.12
+    }
+
+  );
+
 
   animatedElements.forEach((element) => {
 
-    element.classList.add(
-      "hidden-card"
-    );
+    element.classList.add("hidden-card");
 
-    revealObserver.observe(element);
+    observer.observe(element);
 
   });
 
 
-  /* =========================================
-     WELCOME MESSAGE
-  ========================================= */
-
-  console.log(
-    "SkillLink frontend initialized successfully."
-  );
+  console.log("SkillLink loaded successfully.");
 
 });
 
 
-/* =========================================
-   MESSAGE SYSTEM
-========================================= */
-
+// NOTIFICATION
 function showMessage(message) {
 
-  const existing =
-    document.querySelector(".skilllink-message");
+  const oldMessage = document.querySelector(".skilllink-message");
 
-  if (existing) {
-    existing.remove();
+  if (oldMessage) {
+    oldMessage.remove();
   }
 
 
-  const notification =
-    document.createElement("div");
+  const notification = document.createElement("div");
 
-  notification.className =
-    "skilllink-message";
+  notification.className = "skilllink-message";
 
-  notification.textContent =
-    message;
+  notification.textContent = message;
 
 
-  Object.assign(
-    notification.style,
-    {
-      position: "fixed",
-      bottom: "25px",
-      left: "50%",
-      transform: "translateX(-50%)",
-      zIndex: "9999",
-      padding: "14px 20px",
-      borderRadius: "12px",
-      background: "#0d2347",
-      color: "#ffffff",
-      border: "1px solid rgba(255,255,255,0.15)",
-      boxShadow: "0 15px 40px rgba(0,0,0,0.35)",
-      maxWidth: "90%",
-      textAlign: "center",
-      fontSize: "14px"
-    }
-  );
+  Object.assign(notification.style, {
+
+    position: "fixed",
+    bottom: "25px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: "99999",
+
+    padding: "14px 22px",
+
+    borderRadius: "14px",
+
+    background:
+      "linear-gradient(135deg, #1769ff, #7c3aed)",
+
+    color: "#ffffff",
+
+    border:
+      "1px solid rgba(255,255,255,0.2)",
+
+    boxShadow:
+      "0 20px 60px rgba(0,0,0,0.45)",
+
+    maxWidth: "90%",
+
+    textAlign: "center",
+
+    fontSize: "14px",
+
+    fontWeight: "600"
+
+  });
 
 
-  document.body.appendChild(
-    notification
-  );
+  document.body.appendChild(notification);
 
 
   setTimeout(() => {
@@ -277,9 +212,11 @@ function showMessage(message) {
       "opacity 0.3s ease";
 
     setTimeout(() => {
+
       notification.remove();
+
     }, 300);
 
   }, 2500);
 
-}
+     }
