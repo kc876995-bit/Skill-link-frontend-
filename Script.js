@@ -1,4 +1,4 @@
-alert("SKILLLINK SCRIPT LOADED");
+alert("SCRIPT WORKING");
 // ===============================
 // SKILLINK - SUPABASE AUTH SYSTEM
 // ===============================
