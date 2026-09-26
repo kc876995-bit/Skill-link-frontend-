@@ -13,7 +13,17 @@ const supabase = createClient(
   SUPABASE_URL,
   SUPABASE_PUBLISHABLE_KEY
 );
+document.addEventListener("DOMContentLoaded", () => {
+  const signupButton = document.querySelector(".signup-button");
 
+  if (signupButton) {
+    signupButton.addEventListener("click", () => {
+      alert("SIGN UP BUTTON WORKING");
+    });
+  } else {
+    alert("SIGN UP BUTTON NOT FOUND");
+  }
+});
 
 // ===============================
 // PAGE LOAD
